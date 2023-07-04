@@ -1,0 +1,36 @@
+.man{
+-fx-background-image:url('wave.jpg');
+-fx-background-size:cover;
+}
+.bg2{
+-fx-background-image:url('bg2.jpg');
+-fx-background-size:cover;
+}
+.bgBot{
+-fx-background-image:url('bot.jpg');
+-fx-background-color:#fff;
+-fx-background-size:cover;
+}
+.textArea{
+-fx-background-color:none;
+-fx-border-style:hidden hidden solid hidden;
+-fx-border-color:#fff;
+-fx-highlight-fill:#fff;
+-fx-highlight-text-fill:#000;
+-fx-text-fill:#fff;
+}
+.dateArea{
+-fx-border-style:hidden hidden solid hidden;
+-fx-border-color:#fff;
+-fx-control-inner-background:none;
+-fx-background-color:none;
+}
+.bgFade{
+-fx-background-color:rgba(0,0,0,0.3);
+}
+.shadow{
+-fx-effect: dropshadow(gaussian,rgba(0,0,0,0.3),10,0.5,0.0,0.0);
+}
+.btn1{
+-fx-background-color: #ff9900;
+}

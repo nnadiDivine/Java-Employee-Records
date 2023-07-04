@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="root" styleClass="man" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.employeerecords.AppController">
+  <children>
+    <VBox alignment="TOP_CENTER" prefWidth="140.0" style="-fx-background-color: orange;">
+         <children>
+            <ImageView fitHeight="156.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@users.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="addRecordsBtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#addRecord" prefHeight="37.0" prefWidth="148.0" stylesheets="@style.css" text="+ Add Records">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="btn1" />
+               </styleClass>
+            </Button>
+            <Button id="aboutBtn" fx:id="displayBtn" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="186.0" mnemonicParsing="false" onMouseClicked="#view" prefHeight="37.0" prefWidth="147.0" stylesheets="@style.css" text="Display Records">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="btn1" />
+               </styleClass></Button>
+         </children></VBox>
+      <VBox layoutX="10.0" layoutY="10.0" style="-fx-background-color: orange;" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="56.0">
+               <children>
+                  <TextField fx:id="searchBar" onAction="#search" prefHeight="25.0" prefWidth="602.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children></HBox>
+            <ScrollPane fx:id="view1" fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" minHeight="-Infinity">
+              <content>
+                <AnchorPane fx:id="view2" prefHeight="600.0" prefWidth="645.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <VBox fx:id="viewRecordsBox" prefHeight="600.0" prefWidth="645.0" styleClass="bgBot" stylesheets="@style.css" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+  </children>
+</HBox>
